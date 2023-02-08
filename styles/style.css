@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Overpass", sans-serif;
+  font-size: 0.9375rem;
+  background-color: hsl(216deg, 12%, 8%);
+  color: hsl(0deg, 0%, 100%);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 25.75rem;
+  min-height: 26rem;
+  display: flex;
+  background-color: hsl(213deg, 19%, 18%);
+  padding: 2rem;
+  margin: 0.5rem 1.5rem;
+  border-radius: 2rem;
+}
+.container .rating-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container .rating-container .star {
+  width: 3rem;
+  height: 3rem;
+  background-color: hsl(216deg, 12%, 25%);
+  border-radius: 50%;
+  background-image: url("../images/icon-star.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1.1rem;
+}
+.container .rating-container h2 {
+  font-size: 1.7rem;
+}
+.container .rating-container p {
+  line-height: 1.7rem;
+  color: hsl(217deg, 12%, 63%);
+  font-size: 1.1rem;
+}
+.container .rating-container .rating-number-container {
+  display: flex;
+  justify-content: space-between;
+}
+.container .rating-container .rating-number-container button {
+  cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+  background-color: hsl(216deg, 12%, 25%);
+  border-radius: 50%;
+  border: none;
+  color: hsl(217deg, 12%, 63%);
+  font-size: 1.05rem;
+  font-weight: bold;
+  font-family: "Overpass", sans-serif;
+  padding-top: 0.1rem;
+}
+.container .rating-container .rating-number-container button:hover {
+  background-color: hsl(217deg, 12%, 63%);
+  color: hsl(0deg, 0%, 100%);
+}
+.container .rating-container .submit-button {
+  cursor: pointer;
+  border-radius: 2rem;
+  height: 3rem;
+  color: hsl(0deg, 0%, 100%);
+  font-family: "Overpass", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.01rem;
+  letter-spacing: 0.1rem;
+  background-color: hsl(25deg, 97%, 53%);
+  border: none;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  padding-top: 0.1rem;
+}
+.container .rating-container .submit-button:hover {
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(25deg, 97%, 53%);
+}
+.container .result-container {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.container .result-container img {
+  width: 10.25rem;
+  height: auto;
+}
+.container .result-container .rating-result {
+  border-radius: 2rem;
+  background-color: hsl(216deg, 12%, 25%);
+  color: orange;
+  padding: 0.4rem 1.1rem;
+  font-size: 0.98rem;
+  margin-top: 1.5rem;
+}
+.container .result-container h2 {
+  font-size: 1.7rem;
+  margin-top: 1rem;
+}
+.container .result-container p {
+  text-align: center;
+  letter-spacing: 0.01rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.8rem;
+  color: hsl(217deg, 12%, 63%);
+}
+
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+footer p {
+  color: hsl(217deg, 12%, 63%);
+  margin-bottom: 0.3rem;
+}
+footer p span:last-child {
+  display: block;
+}
+footer i {
+  font-size: 0.8rem;
+  margin: 0.25rem;
+}
+footer a {
+  color: hsl(217deg, 12%, 63%);
+}
+footer a:hover {
+  color: hsl(25deg, 97%, 53%);
+  transition: 700ms;
+}
+
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 3.4vw;
+  }
+}
+@media only screen and (min-width: 480px) {
+  .container .rating-container p {
+    line-height: 1.5rem;
+    font-size: initial;
+  }
+}/*# sourceMappingURL=style.css.map */
