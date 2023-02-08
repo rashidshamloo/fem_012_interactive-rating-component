@@ -67,7 +67,7 @@ body {
   padding-top: 0.1rem;
 }
 .container .rating-container .rating-number-container button:hover {
-  background-color: hsl(217deg, 12%, 63%);
+  background-color: hsl(25deg, 97%, 53%);
   color: hsl(0deg, 0%, 100%);
 }
 .container .rating-container .submit-button {

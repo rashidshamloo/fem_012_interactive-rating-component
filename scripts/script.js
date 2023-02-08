@@ -2,7 +2,7 @@
 
 let rating = 0;
 let white = "hsl(0, 0%, 100%)";
-let orange = "hsl(25, 97%, 53%)";
+let lightGrey = "hsl(217, 12%, 63%)";
 let mediumGray = "hsl(216, 12%, 25%)";
 
 /* function declarations */
@@ -26,7 +26,7 @@ function setRating() {
     }
   }
   //set active style for the selected rating element
-  window.event.target.style.backgroundColor = orange;
+  window.event.target.style.backgroundColor = lightGrey;
   window.event.target.style.color = white;
   window.event.target.style.cursor = "default";
 }
