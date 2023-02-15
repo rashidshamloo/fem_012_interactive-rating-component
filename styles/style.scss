@@ -87,6 +87,7 @@ body {
         align-items: center;
         justify-content: center;
         user-select: none;
+        transition: all 300ms;
       }
       input[type="radio"] + label:hover {
         background-color: $orange;
@@ -114,6 +115,7 @@ body {
       justify-content: center;
       align-items: center;
       outline: none;
+      transition: all 300ms;
       &.enabled {
         background-color: $orange;
         color: $white;
