@@ -52,8 +52,21 @@ body {
 .container .rating-container .rating-number-container {
   display: flex;
   justify-content: space-between;
+  outline: none;
+  border: none;
 }
-.container .rating-container .rating-number-container button {
+.container .rating-container .rating-number-container input[type=radio] {
+  opacity: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+.container .rating-container .rating-number-container input[type=radio]:checked + label {
+  background-color: hsl(217deg, 12%, 63%);
+  color: hsl(0deg, 0%, 100%);
+}
+.container .rating-container .rating-number-container input[type=radio] + label {
+  position: relative;
   cursor: pointer;
   width: 3rem;
   height: 3rem;
@@ -65,12 +78,22 @@ body {
   font-weight: bold;
   font-family: "Overpass", sans-serif;
   padding-top: 0.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
-.container .rating-container .rating-number-container button:hover {
+.container .rating-container .rating-number-container input[type=radio] + label:hover {
   background-color: hsl(25deg, 97%, 53%);
   color: hsl(0deg, 0%, 100%);
 }
+.container .rating-container .rating-number-container .hidden {
+  visibility: hidden;
+}
 .container .rating-container .submit-button {
+  width: 100%;
   cursor: pointer;
   border-radius: 2rem;
   height: 3rem;
@@ -81,9 +104,13 @@ body {
   letter-spacing: 0.1rem;
   background-color: hsl(25deg, 97%, 53%);
   border: none;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   font-weight: bold;
   padding-top: 0.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
 }
 .container .rating-container .submit-button:hover {
   background-color: hsl(0deg, 0%, 100%);
