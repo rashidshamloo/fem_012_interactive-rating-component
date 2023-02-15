@@ -96,17 +96,16 @@ body {
         visibility: hidden;
       }
     }
-    .submit-button {
+    #submit-button {
       width: 100%;
-      cursor: pointer;
       border-radius: 2rem;
       height: 3rem;
-      color: $white;
+      color: $lightGrey;
       font-family: "Overpass", sans-serif;
       text-transform: uppercase;
       font-size: 1.01rem;
       letter-spacing: 0.1rem;
-      background-color: $orange;
+      background-color: $mediumGrey;
       border: none;
       margin-top: 1rem;
       font-weight: bold;
@@ -115,8 +114,13 @@ body {
       justify-content: center;
       align-items: center;
       outline: none;
+      &.enabled {
+        background-color: $orange;
+        color: $white;
+        cursor: pointer;
+      }
     }
-    .submit-button:hover {
+    #submit-button:not([disabled]):hover {
       background-color: $white;
       color: $orange;
     }

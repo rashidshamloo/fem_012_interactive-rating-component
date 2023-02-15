@@ -1,5 +1,10 @@
 //set event listener for the form
-document.getElementById("rating-form").addEventListener("submit",setRating);
+document.getElementById("rating-form").addEventListener("submit", setRating);
+
+//set event listener for radio buttons to enable the button on change
+let radioButtons = document.querySelectorAll('[id^="choice-"]');
+for (var radioButton of radioButtons)
+  radioButton.addEventListener("change", enableButton, { once: true });
 
 //updates the rating number in DOM and switches the layout divs
 function setRating(event) {
@@ -15,4 +20,10 @@ function setRating(event) {
   document.getElementById("result").textContent = rating;
   document.getElementsByClassName("rating-container")[0].style.display = "none";
   document.getElementsByClassName("result-container")[0].style.display = "flex";
+}
+
+//enables the submit button
+function enableButton() {
+  document.getElementById("submit-button").removeAttribute("disabled");
+  document.getElementById("submit-button").classList.add("enabled");
 }

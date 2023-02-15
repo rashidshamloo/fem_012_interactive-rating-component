@@ -92,17 +92,16 @@ body {
 .container .rating-container .rating-number-container .hidden {
   visibility: hidden;
 }
-.container .rating-container .submit-button {
+.container .rating-container #submit-button {
   width: 100%;
-  cursor: pointer;
   border-radius: 2rem;
   height: 3rem;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(217deg, 12%, 63%);
   font-family: "Overpass", sans-serif;
   text-transform: uppercase;
   font-size: 1.01rem;
   letter-spacing: 0.1rem;
-  background-color: hsl(25deg, 97%, 53%);
+  background-color: hsl(216deg, 12%, 25%);
   border: none;
   margin-top: 1rem;
   font-weight: bold;
@@ -112,7 +111,12 @@ body {
   align-items: center;
   outline: none;
 }
-.container .rating-container .submit-button:hover {
+.container .rating-container #submit-button.enabled {
+  background-color: hsl(25deg, 97%, 53%);
+  color: hsl(0deg, 0%, 100%);
+  cursor: pointer;
+}
+.container .rating-container #submit-button:not([disabled]):hover {
   background-color: hsl(0deg, 0%, 100%);
   color: hsl(25deg, 97%, 53%);
 }
